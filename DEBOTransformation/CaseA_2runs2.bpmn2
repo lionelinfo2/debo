@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" 
+xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" 
+xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" 
+xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" 
+xmlns:signavio="http://www.signavio.com" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+exporter="Signavio Process Editor, http://www.signavio.com" 
+exporterVersion="4.6.0" 
+expressionLanguage="http://www.w3.org/1999/XPath" 
+id="sid-ecd51320-189c-479e-b93e-23acd9460328" 
+targetNamespace="http://www.omg.org/bpmn20" 
+typeLanguage="http://www.w3.org/2001/XMLSchema" >
+	<process id="sid-216e0bdd-3581-48f3-a0c5-34b3c83e4730"
+		isExecutable="false">
+		<task completionQuantity="1"
+			id="sid-4EB43D41-A1BA-4C6B-AF64-5F951D977A34" isForCompensation="false"
+			name="A" startQuantity="1">
+			
+			<incoming>sid-F31EEFE6-DE03-4C14-BDF8-E7354A682E10</incoming>
+			<outgoing>sid-98639C5B-766A-4A19-A74D-0C13C1161161</outgoing>
+		</task>
+		<parallelGateway gatewayDirection="Diverging"
+			id="sid-E1AD3E00-36A5-4F8B-A140-4C3027DAA1CA" name="">
+			
+			<incoming>sid-5C32F339-A3B1-40EE-92EE-00C4B8C9B530</incoming>
+			<outgoing>sid-1F8EAB27-1C2D-4C8C-87F7-510FA847CBDF</outgoing>
+			<outgoing>sid-B1EE2ED4-88E2-4626-AB61-6E0DF5EEE816</outgoing>
+			<outgoing>sid-F31EEFE6-DE03-4C14-BDF8-E7354A682E10</outgoing>
+		</parallelGateway>
+		<startEvent id="sid-E53E3442-F87F-4F55-AC13-6D2B58E06997"
+			name="StartEvent">
+			
+			<outgoing>sid-5C32F339-A3B1-40EE-92EE-00C4B8C9B530</outgoing>
+		</startEvent>
+		<task completionQuantity="1"
+			id="sid-7F0448E8-CA8E-4338-97CE-BF39222790C2" isForCompensation="false"
+			name="C" startQuantity="1">
+			
+			<incoming>sid-B1EE2ED4-88E2-4626-AB61-6E0DF5EEE816</incoming>
+			<outgoing>sid-4D3D9B07-58E7-4E1D-8C45-90446087262C</outgoing>
+		</task>
+		<parallelGateway gatewayDirection="Converging"
+			id="sid-B0AB3346-F670-47F4-9AEA-40D9666393A0" name="">
+			
+			<incoming>sid-F1910062-D1C6-4B76-B3FD-14757C94B13E</incoming>
+			<incoming>sid-4D3D9B07-58E7-4E1D-8C45-90446087262C</incoming>
+			<outgoing>sid-C188F4A7-1797-4D3F-894A-BEBB4ADF6CB4</outgoing>
+		</parallelGateway>
+		<task completionQuantity="1"
+			id="sid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD2" isForCompensation="false"
+			name="B" startQuantity="1">
+			
+			<outgoing>sid-2A96B5DF-2270-4C7D-B447-531B5551FB95</outgoing>
+			<outgoing>sid-F1910062-D1C6-4B76-B3FD-14757C94B13E</outgoing>
+		</task>
+		<parallelGateway gatewayDirection="Converging"
+			id="sid-B713C9B6-055D-4D59-8A7A-BF38022FE303" name="">
+			
+			<incoming>sid-2A96B5DF-2270-4C7D-B447-531B5551FB95</incoming>
+			<incoming>sid-98639C5B-766A-4A19-A74D-0C13C1161161</incoming>
+			<outgoing>sid-A135E332-4FB2-44DF-BAB1-FED99DDDFFBD</outgoing>
+		</parallelGateway>
+		<exclusiveGateway gatewayDirection="Converging"
+			id="sid-444C6D72-F6E3-46DD-A2CE-45C18667A7C9" name="">
+			
+			<incoming>sid-A135E332-4FB2-44DF-BAB1-FED99DDDFFBD</incoming>
+			<incoming>sid-C188F4A7-1797-4D3F-894A-BEBB4ADF6CB4</incoming>
+			<outgoing>sid-2B800B92-22EF-4E71-A322-A190D07917C4</outgoing>
+		</exclusiveGateway>
+		<task completionQuantity="1"
+			id="sid-6743DE1F-37BF-4E86-B078-5B84EACDB015" isForCompensation="false"
+			name="D" startQuantity="1">
+			
+			<incoming>sid-2B800B92-22EF-4E71-A322-A190D07917C4</incoming>
+			<outgoing>sid-CF4841A3-876E-4E9E-8536-0691EE045638</outgoing>
+		</task>
+		<endEvent id="sid-99265A43-7EB2-4BD7-8EC8-7870CF650779" name="">
+			
+			<incoming>sid-CF4841A3-876E-4E9E-8536-0691EE045638</incoming>
+		</endEvent>
+		<sequenceFlow id="sid-A135E332-4FB2-44DF-BAB1-FED99DDDFFBD"
+			name="" sourceRef="sid-B713C9B6-055D-4D59-8A7A-BF38022FE303"
+			targetRef="sid-444C6D72-F6E3-46DD-A2CE-45C18667A7C9" />
+		<sequenceFlow id="sid-C188F4A7-1797-4D3F-894A-BEBB4ADF6CB4"
+			name="" sourceRef="sid-B0AB3346-F670-47F4-9AEA-40D9666393A0"
+			targetRef="sid-444C6D72-F6E3-46DD-A2CE-45C18667A7C9" />
+		<sequenceFlow id="sid-2B800B92-22EF-4E71-A322-A190D07917C4"
+			name="" sourceRef="sid-444C6D72-F6E3-46DD-A2CE-45C18667A7C9"
+			targetRef="sid-6743DE1F-37BF-4E86-B078-5B84EACDB015" />
+		<sequenceFlow id="sid-CF4841A3-876E-4E9E-8536-0691EE045638"
+			name="" sourceRef="sid-6743DE1F-37BF-4E86-B078-5B84EACDB015"
+			targetRef="sid-99265A43-7EB2-4BD7-8EC8-7870CF650779" />
+		<sequenceFlow id="sid-2A96B5DF-2270-4C7D-B447-531B5551FB95"
+			name="" sourceRef="sid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD2"
+			targetRef="sid-B713C9B6-055D-4D59-8A7A-BF38022FE303" />
+		<sequenceFlow id="sid-F1910062-D1C6-4B76-B3FD-14757C94B13E"
+			name="" sourceRef="sid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD2"
+			targetRef="sid-B0AB3346-F670-47F4-9AEA-40D9666393A0" />
+		<sequenceFlow id="sid-98639C5B-766A-4A19-A74D-0C13C1161161"
+			name="" sourceRef="sid-4EB43D41-A1BA-4C6B-AF64-5F951D977A34"
+			targetRef="sid-B713C9B6-055D-4D59-8A7A-BF38022FE303" />
+		<sequenceFlow id="sid-4D3D9B07-58E7-4E1D-8C45-90446087262C"
+			name="" sourceRef="sid-7F0448E8-CA8E-4338-97CE-BF39222790C2"
+			targetRef="sid-B0AB3346-F670-47F4-9AEA-40D9666393A0" />
+		<sequenceFlow id="sid-5C32F339-A3B1-40EE-92EE-00C4B8C9B530"
+			name="" sourceRef="sid-E53E3442-F87F-4F55-AC13-6D2B58E06997"
+			targetRef="sid-E1AD3E00-36A5-4F8B-A140-4C3027DAA1CA" />
+		<sequenceFlow id="sid-1F8EAB27-1C2D-4C8C-87F7-510FA847CBDF"
+			name="" sourceRef="sid-E1AD3E00-36A5-4F8B-A140-4C3027DAA1CA" />
+		<sequenceFlow id="sid-B1EE2ED4-88E2-4626-AB61-6E0DF5EEE816"
+			name="" sourceRef="sid-E1AD3E00-36A5-4F8B-A140-4C3027DAA1CA"
+			targetRef="sid-7F0448E8-CA8E-4338-97CE-BF39222790C2" />
+		<sequenceFlow id="sid-F31EEFE6-DE03-4C14-BDF8-E7354A682E10"
+			name="" sourceRef="sid-E1AD3E00-36A5-4F8B-A140-4C3027DAA1CA"
+			targetRef="sid-4EB43D41-A1BA-4C6B-AF64-5F951D977A34" />
+	</process>
+	
+</definitions>

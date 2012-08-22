@@ -1,0 +1,38 @@
+The End-user License Agreement for JDirectoryChooser component
+==============================================================
+
+1.  All copyrights to JDirectoryChooser are exclusively owned by the author
+    - Aleksey Prochukhan.
+
+2.  Anyone may use this software in non-commercial projects. The product that 
+    you produce and/or distribute should NOT be a Java Bean Component or other 
+    User Interface Component with functionality substantially similar or
+    equivalent to the JDirectoryChooser. 
+    
+3.  THE JDIRECTORYCHOOSER COMPONENT IS DISTRIBUTED "AS IS". NO WARRANTY OF ANY
+    KIND IS EXPRESSED OR IMPLIED. YOU USE AT YOUR OWN RISK.
+    NEITHER THE AUTHOR NOR THE AGENTS OF THE AUTHOR WILL BE LIABLE 
+    FOR DATA LOSS, DAMAGES, LOSS OF PROFITS OR ANY OTHER KIND OF LOSS
+    WHILE USING OR MISUSING THIS SOFTWARE.
+
+4.  You may not use, copy, emulate, clone, rent, lease, sell, modify,
+    decompile, disassemble, otherwise reverse engineer, remove any 
+    proprietary notices, labels, trademarks from the SOFTWARE or 
+    associated documentation, or transfer the licensed software, 
+    or any subset of the licensed software, except as provided for in this 
+    agreement. Any such unauthorized use shall result in immediate and 
+    automatic termination of this license and may result in 
+    criminal and/or civil prosecution.    
+
+    All rights not expressly granted here are reserved by Aleksey Prochukhan.
+  
+5.  Installing and using JDirectoryChooser signifies acceptance of these terms
+    and conditions of the license.
+
+6.  If you do not agree with the terms of this license you must remove 
+    JDirectoryChooser files from your storage devices and cease to
+    use the product.
+
+    Thank you for using the JDirectoryChooser component.
+
+                                            Aleksey Prochukhan
