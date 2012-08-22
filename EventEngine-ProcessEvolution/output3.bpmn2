@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmnxmi="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" xmlns:dcxmi="http://www.omg.org/spec/DD/20100524/DC-XMI" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dixmi="http://www.omg.org/spec/DD/20100524/DI-XMI" xmlns:bpmndixmi="http://www.omg.org/spec/BPMN/20100524/DI-XMI" xmlns:xmi="http://schema.omg.org/spec/XMI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="sid-Definitions" exporter="test" exporterVersion="1">
+	<bpmn:process id="sid-Processsid-Task1">
+		<bpmn:endEvent id="EndEventsid-Task1">
+			<bpmn:incoming>SFoutputsid-Task1</bpmn:incoming>
+			<bpmn:signalEventDefinition id="outputDefsid-Task1" signalRef="Signalsid-Task1"/>
+		</bpmn:endEvent>
+		<bpmn:sequenceFlow id="SFinputsid-Task1" targetRef="sid-Task1" sourceRef="StartEventsid-Task1"/>
+		<bpmn:sequenceFlow id="SFoutputsid-Task1" targetRef="EndEventsid-Task1" sourceRef="sid-Task1"/>
+		<bpmn:startEvent id="StartEventsid-Task1">
+			<bpmn:outgoing>SFinputsid-Task1</bpmn:outgoing>
+			<bpmn:signalEventDefinition id="inputDefsid-Task1"/>
+		</bpmn:startEvent>
+		<bpmn:task id="sid-Task1" name="Task">
+			<bpmn:incoming>SFinputsid-Task1</bpmn:incoming>
+			<bpmn:outgoing>SFoutputsid-Task1</bpmn:outgoing>
+		</bpmn:task>
+	</bpmn:process>
+	<bpmn:process id="sid-Processsid-Task2">
+		<bpmn:endEvent id="EndEventsid-Task2">
+			<bpmn:incoming>SFoutputsid-Task2</bpmn:incoming>
+			<bpmn:signalEventDefinition id="outputDefsid-Task2" signalRef="Signalsid-Task2"/>
+		</bpmn:endEvent>
+		<bpmn:sequenceFlow id="SFinputsid-Task2" targetRef="sid-Task2" sourceRef="StartEventsid-Task2"/>
+		<bpmn:sequenceFlow id="SFoutputsid-Task2" targetRef="EndEventsid-Task2" sourceRef="sid-Task2"/>
+		<bpmn:startEvent id="StartEventsid-Task2">
+			<bpmn:outgoing>SFinputsid-Task2</bpmn:outgoing>
+			<bpmn:signalEventDefinition id="inputDefsid-Task2" signalRef="Signalsid-Task1"/>
+		</bpmn:startEvent>
+		<bpmn:task id="sid-Task2" name="Task">
+			<bpmn:incoming>SFinputsid-Task2</bpmn:incoming>
+			<bpmn:outgoing>SFoutputsid-Task2</bpmn:outgoing>
+		</bpmn:task>
+	</bpmn:process>
+	<bpmn:signal id="Signalsid-Task1"/>
+	<bpmn:signal id="Signalsid-Task2"/>
+</bpmn:definitions>

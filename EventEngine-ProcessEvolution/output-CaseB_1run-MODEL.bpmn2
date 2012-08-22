@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	xmlns:bpmnxmi="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"
+	xmlns:dcxmi="http://www.omg.org/spec/DD/20100524/DC-XMI" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dixmi="http://www.omg.org/spec/DD/20100524/DI-XMI"
+	xmlns:bpmndixmi="http://www.omg.org/spec/BPMN/20100524/DI-XMI"
+	xmlns:xmi="http://schema.omg.org/spec/XMI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+	xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="definitions">
+	<bpmn:process id="sid-Processsid-4EB43D41-A1BA-4C6B-AF64-5F951D977A34">
+		<bpmn:endEvent id="EndEventsid-4EB43D41-A1BA-4C6B-AF64-5F951D977A34">
+			<bpmn:incoming>SFoutputsid-4EB43D41-A1BA-4C6B-AF64-5F951D977A34
+			</bpmn:incoming>
+			<bpmn:signalEventDefinition
+				id="outputDefsid-4EB43D41-A1BA-4C6B-AF64-5F951D977A34" signalRef="SignalA" />
+		</bpmn:endEvent>
+		<bpmn:sequenceFlow id="SFoutputsid-4EB43D41-A1BA-4C6B-AF64-5F951D977A34"
+			targetRef="EndEventsid-4EB43D41-A1BA-4C6B-AF64-5F951D977A34"
+			sourceRef="sid-4EB43D41-A1BA-4C6B-AF64-5F951D977A34" />
+		<bpmn:sequenceFlow id="SFinputsid-4EB43D41-A1BA-4C6B-AF64-5F951D977A341"
+			targetRef="sid-4EB43D41-A1BA-4C6B-AF64-5F951D977A34" sourceRef="StartEventsid-4EB43D41-A1BA-4C6B-AF64-5F951D977A340" />
+		<bpmn:startEvent id="StartEventsid-4EB43D41-A1BA-4C6B-AF64-5F951D977A340">
+			<bpmn:outgoing>SFinputsid-4EB43D41-A1BA-4C6B-AF64-5F951D977A341
+			</bpmn:outgoing>
+			<bpmn:signalEventDefinition
+				id="inputDefsid-D2A5C558-3CDC-452C-906A-15BCE20E31010" signalRef="SignalStart" />
+		</bpmn:startEvent>
+		<bpmn:task id="sid-4EB43D41-A1BA-4C6B-AF64-5F951D977A34"
+			name="A">
+			<bpmn:incoming>SFinputsid-4EB43D41-A1BA-4C6B-AF64-5F951D977A341
+			</bpmn:incoming>
+			<bpmn:outgoing>SFoutputsid-4EB43D41-A1BA-4C6B-AF64-5F951D977A34
+			</bpmn:outgoing>
+		</bpmn:task>
+	</bpmn:process>
+	<bpmn:process id="sid-Processsid-7F0448E8-CA8E-4338-97CE-BF39222790C2">
+		<bpmn:endEvent id="EndEventsid-7F0448E8-CA8E-4338-97CE-BF39222790C2">
+			<bpmn:incoming>SFoutputsid-7F0448E8-CA8E-4338-97CE-BF39222790C2
+			</bpmn:incoming>
+			<bpmn:signalEventDefinition
+				id="outputDefsid-7F0448E8-CA8E-4338-97CE-BF39222790C2" signalRef="SignalC" />
+		</bpmn:endEvent>
+		<bpmn:sequenceFlow id="SFoutputsid-7F0448E8-CA8E-4338-97CE-BF39222790C2"
+			targetRef="EndEventsid-7F0448E8-CA8E-4338-97CE-BF39222790C2"
+			sourceRef="sid-7F0448E8-CA8E-4338-97CE-BF39222790C2" />
+		<bpmn:sequenceFlow id="SFinputsid-7F0448E8-CA8E-4338-97CE-BF39222790C24"
+			targetRef="sid-7F0448E8-CA8E-4338-97CE-BF39222790C2" sourceRef="StartEventsid-7F0448E8-CA8E-4338-97CE-BF39222790C23" />
+		<bpmn:startEvent id="StartEventsid-7F0448E8-CA8E-4338-97CE-BF39222790C23">
+			<bpmn:outgoing>SFinputsid-7F0448E8-CA8E-4338-97CE-BF39222790C24
+			</bpmn:outgoing>
+			<bpmn:signalEventDefinition
+				id="inputDefsid-D2A5C558-3CDC-452C-906A-15BCE20E31013" signalRef="SignalStart" />
+		</bpmn:startEvent>
+		<bpmn:task id="sid-7F0448E8-CA8E-4338-97CE-BF39222790C2"
+			name="C">
+			<bpmn:incoming>SFinputsid-7F0448E8-CA8E-4338-97CE-BF39222790C24
+			</bpmn:incoming>
+			<bpmn:outgoing>SFoutputsid-7F0448E8-CA8E-4338-97CE-BF39222790C2
+			</bpmn:outgoing>
+		</bpmn:task>
+	</bpmn:process>
+	<bpmn:process id="sid-Processsid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD2">
+		<bpmn:endEvent id="EndEventsid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD2">
+			<bpmn:incoming>SFoutputsid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD2
+			</bpmn:incoming>
+			<bpmn:signalEventDefinition
+				id="outputDefsid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD2" signalRef="SignalB" />
+		</bpmn:endEvent>
+		<bpmn:sequenceFlow id="SFoutputsid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD2"
+			targetRef="EndEventsid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD2"
+			sourceRef="sid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD2" />
+		<bpmn:sequenceFlow id="SFinputsid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD27"
+			targetRef="sid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD2" sourceRef="StartEventsid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD26" />
+		<bpmn:startEvent id="StartEventsid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD26">
+			<bpmn:outgoing>SFinputsid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD27
+			</bpmn:outgoing>
+			<bpmn:signalEventDefinition
+				id="inputDefsid-D2A5C558-3CDC-452C-906A-15BCE20E31016" signalRef="SignalStart" />
+		</bpmn:startEvent>
+		<bpmn:task id="sid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD2"
+			name="B">
+			<bpmn:incoming>SFinputsid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD27
+			</bpmn:incoming>
+			<bpmn:outgoing>SFoutputsid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD2
+			</bpmn:outgoing>
+		</bpmn:task>
+	</bpmn:process>
+	<bpmn:process id="sid-Processsid-6743DE1F-37BF-4E86-B078-5B84EACDB015">
+		<bpmn:endEvent id="EndEventsid-6743DE1F-37BF-4E86-B078-5B84EACDB015">
+			<bpmn:incoming>SFoutputsid-6743DE1F-37BF-4E86-B078-5B84EACDB015
+			</bpmn:incoming>
+			<bpmn:signalEventDefinition
+				id="outputDefsid-6743DE1F-37BF-4E86-B078-5B84EACDB015" signalRef="SignalD" />
+		</bpmn:endEvent>
+		<bpmn:sequenceFlow id="SFoutputsid-6743DE1F-37BF-4E86-B078-5B84EACDB015"
+			targetRef="EndEventsid-6743DE1F-37BF-4E86-B078-5B84EACDB015"
+			sourceRef="sid-6743DE1F-37BF-4E86-B078-5B84EACDB015" />
+		<bpmn:sequenceFlow id="SFinputsid-6743DE1F-37BF-4E86-B078-5B84EACDB01511"
+			targetRef="sid-6743DE1F-37BF-4E86-B078-5B84EACDB015" sourceRef="StartEventsid-6743DE1F-37BF-4E86-B078-5B84EACDB0159" />
+		<bpmn:sequenceFlow id="SFinputsid-6743DE1F-37BF-4E86-B078-5B84EACDB01515"
+			targetRef="sid-6743DE1F-37BF-4E86-B078-5B84EACDB015" sourceRef="StartEventsid-6743DE1F-37BF-4E86-B078-5B84EACDB01513" />
+		<bpmn:startEvent id="StartEventsid-6743DE1F-37BF-4E86-B078-5B84EACDB0159">
+			<bpmn:outgoing>SFinputsid-6743DE1F-37BF-4E86-B078-5B84EACDB01511
+			</bpmn:outgoing>
+			<bpmn:signalEventDefinition
+				id="inputDefsid-90BB4B7A-FF7F-4F5E-86BB-7DC07602EBEA9" signalRef="SignalA" />
+			<bpmn:signalEventDefinition
+				id="inputDefsid-DA6BB8C1-A477-46A3-A7E5-67D887B4080210" signalRef="SignalB" />
+		</bpmn:startEvent>
+		<bpmn:startEvent
+			id="StartEventsid-6743DE1F-37BF-4E86-B078-5B84EACDB01513">
+			<bpmn:outgoing>SFinputsid-6743DE1F-37BF-4E86-B078-5B84EACDB01515
+			</bpmn:outgoing>
+			<bpmn:signalEventDefinition
+				id="inputDefsid-4D3D9B07-58E7-4E1D-8C45-90446087262C13" signalRef="SignalC" />
+			<bpmn:signalEventDefinition
+				id="inputDefsid-DA6BB8C1-A477-46A3-A7E5-67D887B4080214" signalRef="SignalB" />
+		</bpmn:startEvent>
+		<bpmn:task id="sid-6743DE1F-37BF-4E86-B078-5B84EACDB015"
+			name="D">
+			<bpmn:incoming>SFinputsid-6743DE1F-37BF-4E86-B078-5B84EACDB01511
+				SFinputsid-6743DE1F-37BF-4E86-B078-5B84EACDB01515</bpmn:incoming>
+			<bpmn:outgoing>SFoutputsid-6743DE1F-37BF-4E86-B078-5B84EACDB015
+			</bpmn:outgoing>
+		</bpmn:task>
+	</bpmn:process>
+	<bpmn:signal id="SignalA" />
+	<bpmn:signal id="SignalC" />
+	<bpmn:signal id="SignalB" />
+	<bpmn:signal id="SignalD" />
+	<bpmn:signal id="SignalStart" />
+</bpmn:definitions>

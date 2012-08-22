@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	xmlns:bpmnxmi="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"
+	xmlns:dcxmi="http://www.omg.org/spec/DD/20100524/DC-XMI" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dixmi="http://www.omg.org/spec/DD/20100524/DI-XMI"
+	xmlns:bpmndixmi="http://www.omg.org/spec/BPMN/20100524/DI-XMI"
+	xmlns:xmi="http://schema.omg.org/spec/XMI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+	xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="definitions">
+	<bpmn:process id="sid-Processsid-A">
+		<bpmn:endEvent id="EndEventsid-A">
+			<bpmn:incoming>SFoutputsid-A</bpmn:incoming>
+			<bpmn:signalEventDefinition id="outputDefsid-A"
+				signalRef="SignalA" />
+		</bpmn:endEvent>
+		<bpmn:sequenceFlow id="SFoutputsid-A" targetRef="EndEventsid-A"
+			sourceRef="sid-A" />
+		<bpmn:sequenceFlow id="SFinputsid-A1" targetRef="sid-A"
+			sourceRef="StartEventsid-A0" />
+		<bpmn:startEvent id="StartEventsid-A0">
+			<bpmn:outgoing>SFinputsid-A1</bpmn:outgoing>
+			<bpmn:signalEventDefinition
+				id="inputDefsid-D2A5C558-3CDC-452C-906A-15BCE20E31010" signalRef="SignalStart" />
+		</bpmn:startEvent>
+		<bpmn:task id="sid-A" name="A">
+			<bpmn:incoming>SFinputsid-A1</bpmn:incoming>
+			<bpmn:outgoing>SFoutputsid-A</bpmn:outgoing>
+		</bpmn:task>
+	</bpmn:process>
+	<bpmn:process id="sid-Processsid-B">
+		<bpmn:endEvent id="EndEventsid-B">
+			<bpmn:incoming>SFoutputsid-B</bpmn:incoming>
+			<bpmn:signalEventDefinition id="outputDefsid-B"
+				signalRef="SignalB" />
+		</bpmn:endEvent>
+		<bpmn:sequenceFlow id="SFoutputsid-B" targetRef="EndEventsid-B"
+			sourceRef="sid-B" />
+		<bpmn:sequenceFlow id="SFinputsid-B4" targetRef="sid-B"
+			sourceRef="StartEventsid-B3" />
+		<bpmn:startEvent id="StartEventsid-B3">
+			<bpmn:outgoing>SFinputsid-B4</bpmn:outgoing>
+			<bpmn:signalEventDefinition
+				id="inputDefsid-D2A5C558-3CDC-452C-906A-15BCE20E31013" signalRef="SignalStart" />
+		</bpmn:startEvent>
+		<bpmn:task id="sid-B" name="B">
+			<bpmn:incoming>SFinputsid-B4</bpmn:incoming>
+			<bpmn:outgoing>SFoutputsid-B</bpmn:outgoing>
+		</bpmn:task>
+	</bpmn:process>
+	<bpmn:process id="sid-Processsid-C">
+		<bpmn:endEvent id="EndEventsid-C">
+			<bpmn:incoming>SFoutputsid-C</bpmn:incoming>
+			<bpmn:signalEventDefinition id="outputDefsid-C"
+				signalRef="SignalC" />
+		</bpmn:endEvent>
+		<bpmn:sequenceFlow id="SFoutputsid-C" targetRef="EndEventsid-C"
+			sourceRef="sid-C" />
+		<bpmn:sequenceFlow id="SFinputsid-C7" targetRef="sid-C"
+			sourceRef="StartEventsid-C6" />
+		<bpmn:startEvent id="StartEventsid-C6">
+			<bpmn:outgoing>SFinputsid-C7</bpmn:outgoing>
+			<bpmn:signalEventDefinition
+				id="inputDefsid-D2A5C558-3CDC-452C-906A-15BCE20E31016" signalRef="SignalStart" />
+		</bpmn:startEvent>
+		<bpmn:task id="sid-C" name="C">
+			<bpmn:incoming>SFinputsid-C7</bpmn:incoming>
+			<bpmn:outgoing>SFoutputsid-C</bpmn:outgoing>
+		</bpmn:task>
+	</bpmn:process>
+	<bpmn:process id="sid-Processsid-D">
+		<bpmn:endEvent id="EndEventsid-D">
+			<bpmn:incoming>SFoutputsid-D</bpmn:incoming>
+			<bpmn:signalEventDefinition id="outputDefsid-D"
+				signalRef="SignalEnd" />
+		</bpmn:endEvent>
+		<bpmn:sequenceFlow id="SFoutputsid-D" targetRef="EndEventsid-D"
+			sourceRef="sid-D" />
+		<bpmn:sequenceFlow id="SFinputsid-D11" targetRef="sid-D"
+			sourceRef="StartEventsid-D9" />
+		<bpmn:sequenceFlow id="SFinputsid-D15" targetRef="sid-D"
+			sourceRef="StartEventsid-D13" />
+		<bpmn:startEvent id="StartEventsid-D9">
+			<bpmn:outgoing>SFinputsid-D11</bpmn:outgoing>
+			<bpmn:signalEventDefinition
+				id="inputDefsid-F1910062-D1C6-4B76-B3FD-14757C94B13E9" signalRef="SignalB" />
+			<bpmn:signalEventDefinition
+				id="inputDefsid-4D3D9B07-58E7-4E1D-8C45-90446087262C10" signalRef="SignalC" />
+		</bpmn:startEvent>
+		<bpmn:startEvent id="StartEventsid-D13">
+			<bpmn:outgoing>SFinputsid-D15</bpmn:outgoing>
+			<bpmn:signalEventDefinition
+				id="inputDefsid-2A96B5DF-2270-4C7D-B447-531B5551FB9513" signalRef="SignalB" />
+			<bpmn:signalEventDefinition
+				id="inputDefsid-98639C5B-766A-4A19-A74D-0C13C116116114" signalRef="SignalA" />
+		</bpmn:startEvent>
+		<bpmn:task id="sid-D" name="D">
+			<bpmn:incoming>SFinputsid-D11 SFinputsid-D15</bpmn:incoming>
+			<bpmn:outgoing>SFoutputsid-D</bpmn:outgoing>
+		</bpmn:task>
+	</bpmn:process>
+	<bpmn:signal id="SignalA" />
+	<bpmn:signal id="SignalB" />
+	<bpmn:signal id="SignalC" />
+	<bpmn:signal id="SignalEnd" />
+	<bpmn:signal id="SignalStart" />
+</bpmn:definitions>
