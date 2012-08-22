@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" id="_87-wMUWiEeGwNcLCrAiyDg"
+	exporter="Exporter" exporterVersion="1" name="Name" targetNamespace="tns1">
+	<bpmn2:signal id="SignalStartProcess" name="SignalStartProcess" />
+	<bpmn2:process id="c0531a94-e18e-4d4b-988b-922ff87ac104"
+		name="Process-CalculatePrice">
+		<bpmn2:task id="sid-27ABA85F-B5CF-479D-AE45-478DBA0262C0"
+			name="CalculatePrice">
+			<bpmn2:incoming>345210c0-b0d1-404b-a5d8-01c7e2237fe1</bpmn2:incoming>
+			<bpmn2:outgoing>af982336-4af9-4666-910d-d49b12cfa4f5</bpmn2:outgoing>
+		</bpmn2:task>
+		<bpmn2:endEvent id="EndEvent-22953c0b-9938-47e2-8b2b-a519a55eb51a"
+			name="EndEvent">
+			<bpmn2:incoming>af982336-4af9-4666-910d-d49b12cfa4f5</bpmn2:incoming>
+			<bpmn2:signalEventDefinition id="e4c1aa38-eeb5-4429-92b4-682908627436"
+				signalRef="SignalCalculatePrice" />
+		</bpmn2:endEvent>
+		<bpmn2:startEvent id="d71dffb4-0e25-4d2e-8d5a-4246fa720011"
+			name="SignalStartProcess">
+			<bpmn2:outgoing>345210c0-b0d1-404b-a5d8-01c7e2237fe1</bpmn2:outgoing>
+			<bpmn2:signalEventDefinition id="342badaa-2a4e-4aa5-9a66-528c47c65e8d"
+				signalRef="SignalStartProcess" />
+		</bpmn2:startEvent>
+		<bpmn2:sequenceFlow id="345210c0-b0d1-404b-a5d8-01c7e2237fe1"
+			name="from-SignalStartProcess-to-CalculatePrice" sourceRef="d71dffb4-0e25-4d2e-8d5a-4246fa720011"
+			targetRef="sid-27ABA85F-B5CF-479D-AE45-478DBA0262C0" />
+		<bpmn2:sequenceFlow id="af982336-4af9-4666-910d-d49b12cfa4f5"
+			name="from-CalculatePrice-to-EndEvent" sourceRef="sid-27ABA85F-B5CF-479D-AE45-478DBA0262C0"
+			targetRef="EndEvent-22953c0b-9938-47e2-8b2b-a519a55eb51a" />
+	</bpmn2:process>
+	<bpmn2:signal id="SignalCalculatePrice" name="SignalCalculatePrice" />
+	<bpmn2:process id="2dc3b396-b3be-4dae-bc4a-68df74a41c02"
+		name="Process-ArrangePayment">
+		<bpmn2:task id="sid-16D643AA-38A3-42D5-A270-ACAD6BEBF27F"
+			name="ArrangePayment">
+			<bpmn2:incoming>1145c5d7-bd4b-4298-82da-de21f5195389</bpmn2:incoming>
+			<bpmn2:outgoing>ee4bdc91-8bd0-4d1f-a076-2229d026c105</bpmn2:outgoing>
+		</bpmn2:task>
+		<bpmn2:endEvent id="EndEvent-f5d34320-e12a-45f3-9a84-00a479b5126b"
+			name="EndEvent">
+			<bpmn2:incoming>ee4bdc91-8bd0-4d1f-a076-2229d026c105</bpmn2:incoming>
+			<bpmn2:signalEventDefinition id="d101646b-bada-40d0-b0de-fabd8220e87a"
+				signalRef="SignalArrangePayment" />
+		</bpmn2:endEvent>
+		<bpmn2:startEvent id="08d2159a-1dd6-4e1b-8d37-3d771265a880"
+			name="SignalCalculatePrice">
+			<bpmn2:outgoing>1145c5d7-bd4b-4298-82da-de21f5195389</bpmn2:outgoing>
+			<bpmn2:signalEventDefinition id="ad730a36-e1d1-457c-b0ed-cbd7f1b04243"
+				signalRef="SignalCalculatePrice" />
+		</bpmn2:startEvent>
+		<bpmn2:sequenceFlow id="1145c5d7-bd4b-4298-82da-de21f5195389"
+			name="from-SignalCalculatePrice-to-ArrangePayment" sourceRef="08d2159a-1dd6-4e1b-8d37-3d771265a880"
+			targetRef="sid-16D643AA-38A3-42D5-A270-ACAD6BEBF27F" />
+		<bpmn2:sequenceFlow id="ee4bdc91-8bd0-4d1f-a076-2229d026c105"
+			name="from-ArrangePayment-to-EndEvent" sourceRef="sid-16D643AA-38A3-42D5-A270-ACAD6BEBF27F"
+			targetRef="EndEvent-f5d34320-e12a-45f3-9a84-00a479b5126b" />
+	</bpmn2:process>
+	<bpmn2:signal id="SignalArrangePayment" name="SignalArrangePayment" />
+	<bpmn2:process id="0864cc2b-5d4d-47cf-b242-1ea7df4bee36"
+		name="Process-PackageOrder">
+		<bpmn2:task id="sid-162E1DFE-AED5-492B-9F5B-73FF4BD26E7B"
+			name="PackageOrder">
+			<bpmn2:incoming>da4f4e03-3e49-4402-aae9-0e7aa6382bf8</bpmn2:incoming>
+			<bpmn2:incoming>75798159-88db-416c-8b87-625b07d1967f</bpmn2:incoming>
+			<bpmn2:outgoing>7c25197b-c9e4-4c79-a91b-3734b41075e1</bpmn2:outgoing>
+		</bpmn2:task>
+		<bpmn2:endEvent id="EndEvent-23e8aaef-0605-4062-a681-819c789c1f04"
+			name="EndEvent">
+			<bpmn2:incoming>7c25197b-c9e4-4c79-a91b-3734b41075e1</bpmn2:incoming>
+			<bpmn2:signalEventDefinition id="06edbe1e-34f5-458b-add1-bbf9e321d3bb"
+				signalRef="SignalPackageOrder" />
+		</bpmn2:endEvent>
+		<bpmn2:startEvent id="bd7b0eb5-b1c3-4448-97ea-72629871d3fa"
+			name="SignalCreateSideDish-AND-SignalBakePizza" parallelMultiple="true">
+			<bpmn2:outgoing>da4f4e03-3e49-4402-aae9-0e7aa6382bf8</bpmn2:outgoing>
+			<bpmn2:signalEventDefinition id="497bbe7f-7cc4-4daf-820d-6a8369a4f352"
+				signalRef="SignalCreateSideDish" />
+			<bpmn2:eventDefinitionRef>a5266a63-86c5-4a9b-bac3-9f15cad653e0
+			</bpmn2:eventDefinitionRef>
+		</bpmn2:startEvent>
+		<bpmn2:sequenceFlow id="da4f4e03-3e49-4402-aae9-0e7aa6382bf8"
+			name="from-SignalCreateSideDish-AND-SignalBakePizza-to-PackageOrder"
+			sourceRef="bd7b0eb5-b1c3-4448-97ea-72629871d3fa" targetRef="sid-162E1DFE-AED5-492B-9F5B-73FF4BD26E7B" />
+		<bpmn2:startEvent id="b4485462-b485-44b6-9b68-2664d2f562c7"
+			name="SignalStartProcess-AND-SignalBakePizza" parallelMultiple="true">
+			<bpmn2:outgoing>75798159-88db-416c-8b87-625b07d1967f</bpmn2:outgoing>
+			<bpmn2:signalEventDefinition id="380a836e-bd5d-4a9e-bed0-d8c3c784de66"
+				signalRef="SignalStartProcess" />
+			<bpmn2:eventDefinitionRef>a5266a63-86c5-4a9b-bac3-9f15cad653e0
+			</bpmn2:eventDefinitionRef>
+		</bpmn2:startEvent>
+		<bpmn2:sequenceFlow id="75798159-88db-416c-8b87-625b07d1967f"
+			name="from-SignalStartProcess-AND-SignalBakePizza-to-PackageOrder"
+			sourceRef="b4485462-b485-44b6-9b68-2664d2f562c7" targetRef="sid-162E1DFE-AED5-492B-9F5B-73FF4BD26E7B">
+			<bpmn2:conditionExpression xsi:type="bpmn2:tExpression"
+				id="d44c0000-677a-4a1e-ae52-590de4418a43">
+				<bpmn2:documentation id="aa798d14-5e79-4783-96f1-66edf566ddb8">31--100</bpmn2:documentation>
+			</bpmn2:conditionExpression>
+		</bpmn2:sequenceFlow>
+		<bpmn2:sequenceFlow id="7c25197b-c9e4-4c79-a91b-3734b41075e1"
+			name="from-PackageOrder-to-EndEvent" sourceRef="sid-162E1DFE-AED5-492B-9F5B-73FF4BD26E7B"
+			targetRef="EndEvent-23e8aaef-0605-4062-a681-819c789c1f04" />
+	</bpmn2:process>
+	<bpmn2:signal id="SignalPackageOrder" name="SignalPackageOrder" />
+	<bpmn2:signalEventDefinition id="a5266a63-86c5-4a9b-bac3-9f15cad653e0"
+		signalRef="SignalBakePizza" />
+	<bpmn2:process id="472b6d37-2a35-45d2-8e24-610f694ac9bb"
+		name="Process-CreateSideDish">
+		<bpmn2:task id="sid-84F4D3B4-5D5B-46DD-ACA3-BBE504EC7173"
+			name="CreateSideDish">
+			<bpmn2:incoming>7c049c30-df51-4eaa-be48-255b25fc09f9</bpmn2:incoming>
+			<bpmn2:outgoing>ecd779c8-b6fd-46d2-ac66-3cc9731b7a05</bpmn2:outgoing>
+		</bpmn2:task>
+		<bpmn2:endEvent id="EndEvent-52f5f415-c1b2-4db0-86ba-544693cba055"
+			name="EndEvent">
+			<bpmn2:incoming>ecd779c8-b6fd-46d2-ac66-3cc9731b7a05</bpmn2:incoming>
+			<bpmn2:signalEventDefinition id="39e59f50-10f0-4e8d-a38f-540bfd530331"
+				signalRef="SignalCreateSideDish" />
+		</bpmn2:endEvent>
+		<bpmn2:startEvent id="52a3c088-0fc7-4db7-b919-588931d7872f"
+			name="SignalStartProcess">
+			<bpmn2:outgoing>7c049c30-df51-4eaa-be48-255b25fc09f9</bpmn2:outgoing>
+			<bpmn2:signalEventDefinition id="8400c63f-ab03-41a9-8f98-b408777fbe1f"
+				signalRef="SignalStartProcess" />
+		</bpmn2:startEvent>
+		<bpmn2:sequenceFlow id="7c049c30-df51-4eaa-be48-255b25fc09f9"
+			name="from-SignalStartProcess-to-CreateSideDish" sourceRef="52a3c088-0fc7-4db7-b919-588931d7872f"
+			targetRef="sid-84F4D3B4-5D5B-46DD-ACA3-BBE504EC7173">
+			<bpmn2:conditionExpression xsi:type="bpmn2:tExpression"
+				id="9b20fb82-f5a3-4676-b8f4-8140fb9fc386">
+				<bpmn2:documentation id="7480b7f4-2d0c-4775-a1ed-08d221f09a5c">0--30</bpmn2:documentation>
+			</bpmn2:conditionExpression>
+		</bpmn2:sequenceFlow>
+		<bpmn2:sequenceFlow id="ecd779c8-b6fd-46d2-ac66-3cc9731b7a05"
+			name="from-CreateSideDish-to-EndEvent" sourceRef="sid-84F4D3B4-5D5B-46DD-ACA3-BBE504EC7173"
+			targetRef="EndEvent-52f5f415-c1b2-4db0-86ba-544693cba055" />
+	</bpmn2:process>
+	<bpmn2:signal id="SignalCreateSideDish" name="SignalCreateSideDish" />
+	<bpmn2:process id="99f7c664-308f-40be-be22-9379e881296c"
+		name="Process-BakePizza">
+		<bpmn2:task id="sid-4585E3F3-ADDD-44F2-8B75-67675695C00F"
+			name="BakePizza">
+			<bpmn2:incoming>da14a4fd-35a3-4dc8-ba9d-2f2b5a32754a</bpmn2:incoming>
+			<bpmn2:outgoing>77a5b145-c564-4fdf-b65b-0dc4d9a3f7a7</bpmn2:outgoing>
+		</bpmn2:task>
+		<bpmn2:endEvent id="EndEvent-c642c62b-9085-4fb5-b690-fa40b1d26389"
+			name="EndEvent">
+			<bpmn2:incoming>77a5b145-c564-4fdf-b65b-0dc4d9a3f7a7</bpmn2:incoming>
+			<bpmn2:signalEventDefinition id="7e436474-9c67-49d6-8fb0-008f17c2bc94"
+				signalRef="SignalBakePizza" />
+		</bpmn2:endEvent>
+		<bpmn2:startEvent id="26d6c41b-5327-4cd6-bd65-33db4b8da7d6"
+			name="SignalStartProcess">
+			<bpmn2:outgoing>da14a4fd-35a3-4dc8-ba9d-2f2b5a32754a</bpmn2:outgoing>
+			<bpmn2:signalEventDefinition id="a93e21a8-6858-40da-b82b-0220a69060f2"
+				signalRef="SignalStartProcess" />
+		</bpmn2:startEvent>
+		<bpmn2:sequenceFlow id="da14a4fd-35a3-4dc8-ba9d-2f2b5a32754a"
+			name="from-SignalStartProcess-to-BakePizza" sourceRef="26d6c41b-5327-4cd6-bd65-33db4b8da7d6"
+			targetRef="sid-4585E3F3-ADDD-44F2-8B75-67675695C00F" />
+		<bpmn2:sequenceFlow id="77a5b145-c564-4fdf-b65b-0dc4d9a3f7a7"
+			name="from-BakePizza-to-EndEvent" sourceRef="sid-4585E3F3-ADDD-44F2-8B75-67675695C00F"
+			targetRef="EndEvent-c642c62b-9085-4fb5-b690-fa40b1d26389" />
+	</bpmn2:process>
+	<bpmn2:signal id="SignalBakePizza" name="SignalBakePizza" />
+	<bpmn2:process id="9e500fbc-29bb-4a9c-9825-2453ce12ba1a"
+		name="Process-DeliverPizza">
+		<bpmn2:task id="sid-7C4C1105-8BA7-4104-8A08-62193EB4B49B"
+			name="DeliverPizza">
+			<bpmn2:incoming>e91e4bc4-78f6-4154-b2b6-ee319bdb3f22</bpmn2:incoming>
+			<bpmn2:outgoing>40739b19-02f9-4b3d-a522-de90b5ab452f</bpmn2:outgoing>
+		</bpmn2:task>
+		<bpmn2:endEvent id="EndEvent-0d2b502a-6ef4-429a-815f-463a8caedc77"
+			name="EndEvent">
+			<bpmn2:incoming>40739b19-02f9-4b3d-a522-de90b5ab452f</bpmn2:incoming>
+			<bpmn2:signalEventDefinition id="10db0343-8366-4234-a4be-b1816a7b2b30"
+				signalRef="SignalDeliverPizza" />
+		</bpmn2:endEvent>
+		<bpmn2:startEvent id="b5bd0127-1d6d-4fad-ba88-8c1ab381b369"
+			name="SignalArrangePayment-AND-SignalPackageOrder" parallelMultiple="true">
+			<bpmn2:outgoing>e91e4bc4-78f6-4154-b2b6-ee319bdb3f22</bpmn2:outgoing>
+			<bpmn2:signalEventDefinition id="08e17746-a900-4c30-a548-845dd6042437"
+				signalRef="SignalArrangePayment" />
+			<bpmn2:signalEventDefinition id="7d2401eb-84fc-4182-8ee8-f0522a5c5d1b"
+				signalRef="SignalPackageOrder" />
+		</bpmn2:startEvent>
+		<bpmn2:sequenceFlow id="e91e4bc4-78f6-4154-b2b6-ee319bdb3f22"
+			name="from-SignalArrangePayment-AND-SignalPackageOrder-to-DeliverPizza"
+			sourceRef="b5bd0127-1d6d-4fad-ba88-8c1ab381b369" targetRef="sid-7C4C1105-8BA7-4104-8A08-62193EB4B49B" />
+		<bpmn2:sequenceFlow id="40739b19-02f9-4b3d-a522-de90b5ab452f"
+			name="from-DeliverPizza-to-EndEvent" sourceRef="sid-7C4C1105-8BA7-4104-8A08-62193EB4B49B"
+			targetRef="EndEvent-0d2b502a-6ef4-429a-815f-463a8caedc77" />
+	</bpmn2:process>
+	<bpmn2:signal id="SignalDeliverPizza" name="SignalDeliverPizza" />
+</bpmn2:definitions>

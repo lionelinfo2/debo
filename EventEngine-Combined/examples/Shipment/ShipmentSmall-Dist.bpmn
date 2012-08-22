@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" id="_6ZMpAWKvEeGE9IZbkqD_LQ" exporter="Exporter" exporterVersion="1" name="Name" targetNamespace="tns1">
+  <bpmn2:signal id="SignalStartProcess" name="SignalStartProcess"/>
+  <bpmn2:process id="76ca20a5-f95c-48ee-866f-3e6bb4bfb4f7" name="Process-PrepareShipment">
+    <bpmn2:task id="sid-3360A6EF-1D34-43EC-B29D-30EE3D5C779B" name="PrepareShipment">
+      <bpmn2:incoming>6b0f7b6b-4af5-49a6-a5c7-6167a7526190</bpmn2:incoming>
+      <bpmn2:outgoing>a2159832-96b0-4dbc-ab63-44aa6dafac2a</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-052d8aca-96df-4b90-a9a1-390e02f85e33" name="EndEvent">
+      <bpmn2:incoming>a2159832-96b0-4dbc-ab63-44aa6dafac2a</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="5a5194ff-c291-4c59-9c02-1ddebe19c539" signalRef="SignalPrepareShipment"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="a90f2e1e-bf30-4c9a-829f-b106003fcc7c" name="SignalStartProcess">
+      <bpmn2:outgoing>6b0f7b6b-4af5-49a6-a5c7-6167a7526190</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="de4fcd80-46d4-48b9-ab37-8e58cb5ff601" signalRef="SignalStartProcess"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="6b0f7b6b-4af5-49a6-a5c7-6167a7526190" name="from-SignalStartProcess-to-PrepareShipment" sourceRef="a90f2e1e-bf30-4c9a-829f-b106003fcc7c" targetRef="sid-3360A6EF-1D34-43EC-B29D-30EE3D5C779B"/>
+    <bpmn2:sequenceFlow id="a2159832-96b0-4dbc-ab63-44aa6dafac2a" name="from-PrepareShipment-to-EndEvent" sourceRef="sid-3360A6EF-1D34-43EC-B29D-30EE3D5C779B" targetRef="EndEvent-052d8aca-96df-4b90-a9a1-390e02f85e33"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalPrepareShipment" name="SignalPrepareShipment"/>
+</bpmn2:definitions>

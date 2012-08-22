@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" id="_w5GasWLOEeGuDpqKZ1is7Q" exporter="Exporter" exporterVersion="1" name="Name" targetNamespace="tns1">
+  <bpmn2:signal id="SignalStartProcess" name="SignalStartProcess"/>
+  <bpmn2:process id="f8a7bad3-de6b-448b-9bdd-7c3bc62dccdd" name="Process-PrepareShipment">
+    <bpmn2:task id="sid-3360A6EF-1D34-43EC-B29D-30EE3D5C779B" name="PrepareShipment">
+      <bpmn2:incoming>1d9ee671-13a8-4985-9d4b-bc3a495c1fe4</bpmn2:incoming>
+      <bpmn2:outgoing>8f9ee592-94a7-4d0f-b921-407b1639dfd1</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-dd9fa41e-690c-4f96-bc41-329f6413d921" name="EndEvent">
+      <bpmn2:incoming>8f9ee592-94a7-4d0f-b921-407b1639dfd1</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="b96681ff-a28f-4b08-908e-305be2e9bb1c" signalRef="SignalPrepareShipment"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="f719042c-737f-4a2b-8db2-6803f35eb147" name="SignalStartProcess">
+      <bpmn2:outgoing>1d9ee671-13a8-4985-9d4b-bc3a495c1fe4</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="52b89997-ba52-49f2-85df-237a0bc54b0e" signalRef="SignalStartProcess"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="1d9ee671-13a8-4985-9d4b-bc3a495c1fe4" name="from-SignalStartProcess-to-PrepareShipment" sourceRef="f719042c-737f-4a2b-8db2-6803f35eb147" targetRef="sid-3360A6EF-1D34-43EC-B29D-30EE3D5C779B"/>
+    <bpmn2:sequenceFlow id="8f9ee592-94a7-4d0f-b921-407b1639dfd1" name="from-PrepareShipment-to-EndEvent" sourceRef="sid-3360A6EF-1D34-43EC-B29D-30EE3D5C779B" targetRef="EndEvent-dd9fa41e-690c-4f96-bc41-329f6413d921"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalPrepareShipment" name="SignalPrepareShipment"/>
+  <bpmn2:process id="64dcb02f-0976-40ef-b50f-296da770d58b" name="Process-SendBill">
+    <bpmn2:task id="sid-D96CDF61-3642-464D-A37F-3095398F1A36" name="SendBill">
+      <bpmn2:incoming>eef92454-c2ff-4125-bc3f-83051fc9274f</bpmn2:incoming>
+      <bpmn2:outgoing>8b159671-b44b-4412-8292-b12a912a4c66</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-e10d87a4-64c3-4b71-80b8-4396c18689d5" name="EndEvent">
+      <bpmn2:incoming>8b159671-b44b-4412-8292-b12a912a4c66</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="4e0d09b0-78e7-4093-96c6-4f8709514db6" signalRef="SignalSendBill"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="f167e6fe-d32f-40a1-aaa7-07d0b540c82e" name="SignalPrepareShipment">
+      <bpmn2:outgoing>eef92454-c2ff-4125-bc3f-83051fc9274f</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="db51bc4f-e334-45a6-b07d-7176f27d1708" signalRef="SignalPrepareShipment"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="eef92454-c2ff-4125-bc3f-83051fc9274f" name="from-SignalPrepareShipment-to-SendBill" sourceRef="f167e6fe-d32f-40a1-aaa7-07d0b540c82e" targetRef="sid-D96CDF61-3642-464D-A37F-3095398F1A36"/>
+    <bpmn2:sequenceFlow id="8b159671-b44b-4412-8292-b12a912a4c66" name="from-SendBill-to-EndEvent" sourceRef="sid-D96CDF61-3642-464D-A37F-3095398F1A36" targetRef="EndEvent-e10d87a4-64c3-4b71-80b8-4396c18689d5"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalSendBill" name="SignalSendBill"/>
+  <bpmn2:process id="3cb55f6d-34d3-4ac9-b08d-e4f09bc80e6f" name="Process-SendGoods">
+    <bpmn2:task id="sid-FB944717-9F11-42B0-94A5-B7C1F73B1BB0" name="SendGoods">
+      <bpmn2:incoming>e7e08324-d5d1-4a8c-854c-97db8ec0a597</bpmn2:incoming>
+      <bpmn2:outgoing>20bb81b0-6459-4586-83ad-604ae50c7960</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-bba6054a-85c8-4e9b-8d42-3a6488d171c6" name="EndEvent">
+      <bpmn2:incoming>20bb81b0-6459-4586-83ad-604ae50c7960</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="f0936942-52f0-4980-b6ec-62c90e1a4a89" signalRef="SignalSendGoods"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="e672625d-8efa-4d45-b700-66bb59ae0fdc" name="SignalPrepareShipment">
+      <bpmn2:outgoing>e7e08324-d5d1-4a8c-854c-97db8ec0a597</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="4a41d90a-bb85-4d54-b2a8-f3abcf6bc277" signalRef="SignalPrepareShipment"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="e7e08324-d5d1-4a8c-854c-97db8ec0a597" name="from-SignalPrepareShipment-to-SendGoods" sourceRef="e672625d-8efa-4d45-b700-66bb59ae0fdc" targetRef="sid-FB944717-9F11-42B0-94A5-B7C1F73B1BB0"/>
+    <bpmn2:sequenceFlow id="20bb81b0-6459-4586-83ad-604ae50c7960" name="from-SendGoods-to-EndEvent" sourceRef="sid-FB944717-9F11-42B0-94A5-B7C1F73B1BB0" targetRef="EndEvent-bba6054a-85c8-4e9b-8d42-3a6488d171c6"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalSendGoods" name="SignalSendGoods"/>
+  <bpmn2:process id="80d4717e-38a5-4db7-a937-cf900e4d5f10" name="Process-RecordShipment">
+    <bpmn2:task id="sid-4FBFB682-8652-469F-8B01-C5C31223E4C3" name="RecordShipment">
+      <bpmn2:incoming>2c41ada8-d1cd-4eae-a748-78b153b2dbea</bpmn2:incoming>
+      <bpmn2:outgoing>81ba5c5e-4bf2-415e-b5cc-56196ba97a59</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-c5af16c9-71ff-4ac4-ab33-c03f8c1b5d15" name="EndEvent">
+      <bpmn2:incoming>81ba5c5e-4bf2-415e-b5cc-56196ba97a59</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="058a9c4f-ec6d-4e50-a418-6713301db510" signalRef="SignalRecordShipment"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="1eff7488-9fe0-4a5f-a5a1-5aa5c7904efd" name="SignalSendGoods-AND-SignalSendBill" parallelMultiple="true">
+      <bpmn2:outgoing>2c41ada8-d1cd-4eae-a748-78b153b2dbea</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="8c32ea71-c0d0-4f2f-abff-c8a8ef46ee9c" signalRef="SignalSendGoods"/>
+      <bpmn2:signalEventDefinition id="d789477f-14da-4d3a-b558-40bdf4b8da5a" signalRef="SignalSendBill"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="2c41ada8-d1cd-4eae-a748-78b153b2dbea" name="from-SignalSendGoods-AND-SignalSendBill-to-RecordShipment" sourceRef="1eff7488-9fe0-4a5f-a5a1-5aa5c7904efd" targetRef="sid-4FBFB682-8652-469F-8B01-C5C31223E4C3"/>
+    <bpmn2:sequenceFlow id="81ba5c5e-4bf2-415e-b5cc-56196ba97a59" name="from-RecordShipment-to-EndEvent" sourceRef="sid-4FBFB682-8652-469F-8B01-C5C31223E4C3" targetRef="EndEvent-c5af16c9-71ff-4ac4-ab33-c03f8c1b5d15"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalRecordShipment" name="SignalRecordShipment"/>
+</bpmn2:definitions>

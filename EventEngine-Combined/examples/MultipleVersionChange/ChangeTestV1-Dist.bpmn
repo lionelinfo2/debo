@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" id="_m5B6kWLnEeGXta9LSAYHXw" exporter="Exporter" exporterVersion="1" name="Name" targetNamespace="tns1">
+  <bpmn2:signal id="SignalStartProcess" name="SignalStartProcess"/>
+  <bpmn2:process id="06e6f202-b91f-4236-8ef7-5effec3a13ad" name="Process-A">
+    <bpmn2:task id="sid-69A7A46D-ED81-4BD4-9F73-DF23F5413624" name="A">
+      <bpmn2:incoming>d1f62320-902f-4780-a60a-7148ac5bab25</bpmn2:incoming>
+      <bpmn2:outgoing>6444d251-0fcf-4b09-940c-72cdf932061d</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-b13eac00-a02f-4d61-98eb-dff38ced44f0" name="EndEvent">
+      <bpmn2:incoming>6444d251-0fcf-4b09-940c-72cdf932061d</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="b6eb0753-3c50-4692-bb82-ec165f748a35" signalRef="SignalA"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="5ca5b591-487e-430c-8d40-ba261e5f9eeb" name="SignalStartProcess">
+      <bpmn2:outgoing>d1f62320-902f-4780-a60a-7148ac5bab25</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="b2dce940-b6e9-4348-a7e5-945ae1a1daa2" signalRef="SignalStartProcess"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="d1f62320-902f-4780-a60a-7148ac5bab25" name="from-SignalStartProcess-to-A" sourceRef="5ca5b591-487e-430c-8d40-ba261e5f9eeb" targetRef="sid-69A7A46D-ED81-4BD4-9F73-DF23F5413624"/>
+    <bpmn2:sequenceFlow id="6444d251-0fcf-4b09-940c-72cdf932061d" name="from-A-to-EndEvent" sourceRef="sid-69A7A46D-ED81-4BD4-9F73-DF23F5413624" targetRef="EndEvent-b13eac00-a02f-4d61-98eb-dff38ced44f0"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalA" name="SignalA"/>
+  <bpmn2:process id="82750a96-95e9-49c8-b6ca-cc9cf0bb9123" name="Process-B">
+    <bpmn2:task id="sid-EDA17C14-A559-4B71-92DE-3A7495EF6F06" name="B">
+      <bpmn2:documentation id="sid-33ce4164-62ec-4739-8024-8640f0c4beb7">data-generator</bpmn2:documentation>
+      <bpmn2:incoming>11d36a9e-48d1-4565-b441-58399978290c</bpmn2:incoming>
+      <bpmn2:outgoing>357ca205-16d9-4f4f-be70-17779f3e57b9</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-373c01d2-2685-4b7e-95fd-66bfa8c6ce3f" name="EndEvent">
+      <bpmn2:incoming>357ca205-16d9-4f4f-be70-17779f3e57b9</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="957f6bdd-7a53-4431-960d-4a41c3ebcc2a" signalRef="SignalB"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="c158ace4-1060-4246-ba59-8cc2d613fa5d" name="SignalA">
+      <bpmn2:outgoing>11d36a9e-48d1-4565-b441-58399978290c</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="7d1307b2-ea25-4e91-847b-e29a8d944557" signalRef="SignalA"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="11d36a9e-48d1-4565-b441-58399978290c" name="from-SignalA-to-B" sourceRef="c158ace4-1060-4246-ba59-8cc2d613fa5d" targetRef="sid-EDA17C14-A559-4B71-92DE-3A7495EF6F06"/>
+    <bpmn2:sequenceFlow id="357ca205-16d9-4f4f-be70-17779f3e57b9" name="from-B-to-EndEvent" sourceRef="sid-EDA17C14-A559-4B71-92DE-3A7495EF6F06" targetRef="EndEvent-373c01d2-2685-4b7e-95fd-66bfa8c6ce3f"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalB" name="SignalB"/>
+  <bpmn2:process id="87e5e945-c071-4b55-a702-b6509f0367fb" name="Process-D">
+    <bpmn2:task id="sid-1E274DB0-875C-4B89-AA07-5371984620CB" name="D">
+      <bpmn2:incoming>e0a73640-873e-4938-9972-fb1c2771f271</bpmn2:incoming>
+      <bpmn2:outgoing>ef62f42e-be73-4fe9-8b30-9d09d75c1a21</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-391dbfdf-6788-421f-a0fd-08e6fca6651f" name="EndEvent">
+      <bpmn2:incoming>ef62f42e-be73-4fe9-8b30-9d09d75c1a21</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="c4271910-65f1-4938-beda-c2feee1553d9" signalRef="SignalD"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="d5479703-3362-46e1-a112-1ae4d261f87c" name="SignalB">
+      <bpmn2:outgoing>e0a73640-873e-4938-9972-fb1c2771f271</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="5f0dde0a-9859-4726-adf6-d3bfeedec833" signalRef="SignalB"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="e0a73640-873e-4938-9972-fb1c2771f271" name="from-SignalB-to-D" sourceRef="d5479703-3362-46e1-a112-1ae4d261f87c" targetRef="sid-1E274DB0-875C-4B89-AA07-5371984620CB"/>
+    <bpmn2:sequenceFlow id="ef62f42e-be73-4fe9-8b30-9d09d75c1a21" name="from-D-to-EndEvent" sourceRef="sid-1E274DB0-875C-4B89-AA07-5371984620CB" targetRef="EndEvent-391dbfdf-6788-421f-a0fd-08e6fca6651f"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalD" name="SignalD"/>
+  <bpmn2:process id="4f35cb8f-4da1-4c67-88e7-887e5dd8d5c1" name="Process-C">
+    <bpmn2:task id="sid-B50F378F-785A-40C3-862B-A461A730F3C6" name="C">
+      <bpmn2:incoming>3cb3e0e3-861a-49f8-badc-70181689e0fe</bpmn2:incoming>
+      <bpmn2:outgoing>9b662461-49df-4e24-8ecf-80d5318373af</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-5cde77a2-511a-4908-af63-d86e73a0ad37" name="EndEvent">
+      <bpmn2:incoming>9b662461-49df-4e24-8ecf-80d5318373af</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="a63a8933-246a-46b6-9a70-52a0bcb8f61c" signalRef="SignalC"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="338676ab-3dfa-48da-9d06-01918377f257" name="SignalB">
+      <bpmn2:outgoing>3cb3e0e3-861a-49f8-badc-70181689e0fe</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="531276b9-ffaa-42f7-9afb-18a361670f14" signalRef="SignalB"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="3cb3e0e3-861a-49f8-badc-70181689e0fe" name="from-SignalB-to-C" sourceRef="338676ab-3dfa-48da-9d06-01918377f257" targetRef="sid-B50F378F-785A-40C3-862B-A461A730F3C6"/>
+    <bpmn2:sequenceFlow id="9b662461-49df-4e24-8ecf-80d5318373af" name="from-C-to-EndEvent" sourceRef="sid-B50F378F-785A-40C3-862B-A461A730F3C6" targetRef="EndEvent-5cde77a2-511a-4908-af63-d86e73a0ad37"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalC" name="SignalC"/>
+  <bpmn2:process id="3b46176d-e06c-4686-8914-43aea9d5fcd3" name="Process-E">
+    <bpmn2:task id="sid-24191337-CFE1-40DB-A25F-D744569C307F" name="E">
+      <bpmn2:incoming>b9f0621b-06b2-4e1d-8c4e-3ab0695a136e</bpmn2:incoming>
+      <bpmn2:outgoing>a0ea0406-6f13-4330-91c2-8158eb3f67cd</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-a963647a-2250-4381-afa1-250bd641cf07" name="EndEvent">
+      <bpmn2:incoming>a0ea0406-6f13-4330-91c2-8158eb3f67cd</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="e06e9f56-40f6-4a17-8df8-434d34c7308b" signalRef="SignalE"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="ee9fb826-3465-458d-b45f-2d6cafa72d9c" name="SignalC-AND-SignalD" parallelMultiple="true">
+      <bpmn2:outgoing>b9f0621b-06b2-4e1d-8c4e-3ab0695a136e</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="3e1b64e4-1ef8-4f1a-b140-ba911cea377b" signalRef="SignalC"/>
+      <bpmn2:signalEventDefinition id="989af97e-fe50-479f-8351-a21b78a20073" signalRef="SignalD"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="b9f0621b-06b2-4e1d-8c4e-3ab0695a136e" name="from-SignalC-AND-SignalD-to-E" sourceRef="ee9fb826-3465-458d-b45f-2d6cafa72d9c" targetRef="sid-24191337-CFE1-40DB-A25F-D744569C307F"/>
+    <bpmn2:sequenceFlow id="a0ea0406-6f13-4330-91c2-8158eb3f67cd" name="from-E-to-EndEvent" sourceRef="sid-24191337-CFE1-40DB-A25F-D744569C307F" targetRef="EndEvent-a963647a-2250-4381-afa1-250bd641cf07"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalE" name="SignalE"/>
+</bpmn2:definitions>
