@@ -1,0 +1,5 @@
+
+Restore COR choices:
+If two conjunctions (ConjA, ConjB) are found which are both enabled AND both have similar conditions 
+(ConditionsOf(ConjA).containsAll(ConditionsOf(ConjB) OR ConditionsOf(ConjB).containsAll(ConditionsOf(ConjA))
+then remove token from both conjunctions

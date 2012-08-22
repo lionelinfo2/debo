@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" id="_8ZsbsWhCEeGivvKeEccBRA" exporter="Exporter" exporterVersion="1" name="Name" targetNamespace="tns1">
+  <bpmn2:signal id="SignalStartProcess" name="SignalStartProcess"/>
+  <bpmn2:process id="1f39bde2-7707-42f7-aff0-4fb55a32da25" name="Process-START">
+    <bpmn2:task id="sid-91A7F159-9516-4B4B-92A4-9A134A8095CC" name="START">
+      <bpmn2:incoming>9f0a058a-19ad-49a7-bbaf-1faa02456e06</bpmn2:incoming>
+      <bpmn2:outgoing>0caaf6d1-e4a6-4b10-8cb2-d85a5ca51ee1</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-4abda44c-39bc-49aa-b098-92bf4c7d9fcc" name="EndEvent">
+      <bpmn2:incoming>0caaf6d1-e4a6-4b10-8cb2-d85a5ca51ee1</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="0af73d32-0a5d-4ddb-a6fc-322fd72bef80" signalRef="SignalSTART"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="c20f5de4-070a-4400-bfde-a66fe7876f9c" name="SignalStartProcess">
+      <bpmn2:outgoing>9f0a058a-19ad-49a7-bbaf-1faa02456e06</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="60a28459-2912-4df3-bacc-d4405b527140" signalRef="SignalStartProcess"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="9f0a058a-19ad-49a7-bbaf-1faa02456e06" name="from-SignalStartProcess-to-START" sourceRef="c20f5de4-070a-4400-bfde-a66fe7876f9c" targetRef="sid-91A7F159-9516-4B4B-92A4-9A134A8095CC"/>
+    <bpmn2:sequenceFlow id="0caaf6d1-e4a6-4b10-8cb2-d85a5ca51ee1" name="from-START-to-EndEvent" sourceRef="sid-91A7F159-9516-4B4B-92A4-9A134A8095CC" targetRef="EndEvent-4abda44c-39bc-49aa-b098-92bf4c7d9fcc"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalSTART" name="SignalSTART"/>
+  <bpmn2:process id="7e2cc4e8-e209-4a81-adb1-133d4f80943e" name="Process-AcceptClaim">
+    <bpmn2:task id="sid-B494F3E4-978F-4AF1-8EAC-F7D8167369AD" name="AcceptClaim">
+      <bpmn2:incoming>a7b2ac53-a69d-4867-aeaf-abf07b33eca3</bpmn2:incoming>
+      <bpmn2:outgoing>ae76ac54-ea2a-4685-96c3-18aada1804c9</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-5e3c4734-222b-4dd0-b028-33d8f9d47361" name="EndEvent">
+      <bpmn2:incoming>ae76ac54-ea2a-4685-96c3-18aada1804c9</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="7930188f-7612-473e-9ab2-2cd37eacfcfe" signalRef="SignalAcceptClaim"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="ab2bf6ba-2222-46c9-86c5-0a34887eb987" name="SignalSTART">
+      <bpmn2:outgoing>a7b2ac53-a69d-4867-aeaf-abf07b33eca3</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="1171316d-fdd4-440c-9eb1-68408596b723" signalRef="SignalSTART"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="a7b2ac53-a69d-4867-aeaf-abf07b33eca3" name="from-SignalSTART-to-AcceptClaim" sourceRef="ab2bf6ba-2222-46c9-86c5-0a34887eb987" targetRef="sid-B494F3E4-978F-4AF1-8EAC-F7D8167369AD"/>
+    <bpmn2:sequenceFlow id="ae76ac54-ea2a-4685-96c3-18aada1804c9" name="from-AcceptClaim-to-EndEvent" sourceRef="sid-B494F3E4-978F-4AF1-8EAC-F7D8167369AD" targetRef="EndEvent-5e3c4734-222b-4dd0-b028-33d8f9d47361"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalAcceptClaim" name="SignalAcceptClaim"/>
+  <bpmn2:process id="222b027e-f6b6-4ef6-95e3-bf8f28e33bf2" name="Process-CheckClientHistory">
+    <bpmn2:task id="sid-6878E681-F4BE-429C-AADA-61F3E908CA26" name="CheckClientHistory">
+      <bpmn2:incoming>7c057513-6f41-4d83-b445-a85618954575</bpmn2:incoming>
+      <bpmn2:outgoing>f6864aaa-a3da-4b5c-9d80-2f3d1e0cc89f</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-a41c3971-aa60-462a-b324-c1b638ab5ed3" name="EndEvent">
+      <bpmn2:incoming>f6864aaa-a3da-4b5c-9d80-2f3d1e0cc89f</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="ca6e7044-55c9-4f03-849b-5397c947bb61" signalRef="SignalCheckClientHistory"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="fd251de8-5a6b-441d-a019-33ea09b01231" name="SignalAcceptClaim">
+      <bpmn2:outgoing>7c057513-6f41-4d83-b445-a85618954575</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="84f9a58a-4488-4526-ae48-ddbf74ed7ca2" signalRef="SignalAcceptClaim"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="7c057513-6f41-4d83-b445-a85618954575" name="from-SignalAcceptClaim-to-CheckClientHistory" sourceRef="fd251de8-5a6b-441d-a019-33ea09b01231" targetRef="sid-6878E681-F4BE-429C-AADA-61F3E908CA26"/>
+    <bpmn2:sequenceFlow id="f6864aaa-a3da-4b5c-9d80-2f3d1e0cc89f" name="from-CheckClientHistory-to-EndEvent" sourceRef="sid-6878E681-F4BE-429C-AADA-61F3E908CA26" targetRef="EndEvent-a41c3971-aa60-462a-b324-c1b638ab5ed3"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalCheckClientHistory" name="SignalCheckClientHistory"/>
+  <bpmn2:process id="c3d36d63-dd2e-4caa-98fb-c4b82dfe52fc" name="Process-CalculateInsuranceSum">
+    <bpmn2:task id="sid-6E0D2EA6-C235-4879-8EBB-D1391948C3BA" name="CalculateInsuranceSum">
+      <bpmn2:incoming>d4ebe84f-5be1-444a-9b3c-c5f8f0743523</bpmn2:incoming>
+      <bpmn2:outgoing>5b28b16b-316c-4d62-845f-0d477f195dfd</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-6bf87e41-95ca-4a82-a693-6f3ef45abbbe" name="EndEvent">
+      <bpmn2:incoming>5b28b16b-316c-4d62-845f-0d477f195dfd</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="6f13d7cf-8b19-4e03-bd43-6819ab729b3b" signalRef="SignalCalculateInsuranceSum"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="3974f7b9-b5c6-4049-963e-2b0fc4858387" name="SignalPrepareClaim">
+      <bpmn2:outgoing>d4ebe84f-5be1-444a-9b3c-c5f8f0743523</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="6a74eaf6-1e6f-4d6e-9106-b956bb163afa" signalRef="SignalPrepareClaim"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="d4ebe84f-5be1-444a-9b3c-c5f8f0743523" name="from-SignalPrepareClaim-to-CalculateInsuranceSum" sourceRef="3974f7b9-b5c6-4049-963e-2b0fc4858387" targetRef="sid-6E0D2EA6-C235-4879-8EBB-D1391948C3BA"/>
+    <bpmn2:sequenceFlow id="5b28b16b-316c-4d62-845f-0d477f195dfd" name="from-CalculateInsuranceSum-to-EndEvent" sourceRef="sid-6E0D2EA6-C235-4879-8EBB-D1391948C3BA" targetRef="EndEvent-6bf87e41-95ca-4a82-a693-6f3ef45abbbe"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalCalculateInsuranceSum" name="SignalCalculateInsuranceSum"/>
+  <bpmn2:process id="5973f092-7e46-4851-b01d-06829fc78248" name="Process-PrepareClaim">
+    <bpmn2:task id="sid-F422ADE6-13DB-47EB-944E-F2497AC4AE44" name="PrepareClaim">
+      <bpmn2:incoming>3a749439-a21b-46a3-a58b-ef90334eaddd</bpmn2:incoming>
+      <bpmn2:outgoing>cdac3b4e-bab1-4277-817c-a2de71d049f0</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-fba03b23-6cfd-42b9-8748-f6784f5b69b6" name="EndEvent">
+      <bpmn2:incoming>cdac3b4e-bab1-4277-817c-a2de71d049f0</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="51df7199-f410-4552-992d-2f768e06c021" signalRef="SignalPrepareClaim"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="10c40419-44b9-48a0-994b-fd03a278a638" name="SignalAcceptClaim">
+      <bpmn2:outgoing>3a749439-a21b-46a3-a58b-ef90334eaddd</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="830c6f14-bb2b-4c42-a0c6-91912127eab3" signalRef="SignalAcceptClaim"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="3a749439-a21b-46a3-a58b-ef90334eaddd" name="from-SignalAcceptClaim-to-PrepareClaim" sourceRef="10c40419-44b9-48a0-994b-fd03a278a638" targetRef="sid-F422ADE6-13DB-47EB-944E-F2497AC4AE44"/>
+    <bpmn2:sequenceFlow id="cdac3b4e-bab1-4277-817c-a2de71d049f0" name="from-PrepareClaim-to-EndEvent" sourceRef="sid-F422ADE6-13DB-47EB-944E-F2497AC4AE44" targetRef="EndEvent-fba03b23-6cfd-42b9-8748-f6784f5b69b6"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalPrepareClaim" name="SignalPrepareClaim"/>
+  <bpmn2:process id="61731d60-686e-443e-8d5b-4f1907d16917" name="Process-AssessClaim">
+    <bpmn2:task id="sid-6322A484-D0CD-4D6E-9BC3-E8FF2E4E6729" name="AssessClaim">
+      <bpmn2:documentation id="sid-daa59da6-c825-4b1a-a93a-8ba92b6623c9">data-generator</bpmn2:documentation>
+      <bpmn2:incoming>b069f309-13fe-4477-979b-69ffe2a99fa3</bpmn2:incoming>
+      <bpmn2:outgoing>15d18eba-6715-4ba3-8b25-47dee596f9f9</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-2a3bba42-232c-4022-8214-b8dd833b058e" name="EndEvent">
+      <bpmn2:incoming>15d18eba-6715-4ba3-8b25-47dee596f9f9</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="17c7b7b8-fc30-43bf-bb3a-98f3d72ddbf2" signalRef="SignalAssessClaim"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="257d9809-c7f0-4899-a54a-a70b1ae9e60e" name="SignalCheckClientHistory-AND-SignalCalculateInsuranceSum" parallelMultiple="true">
+      <bpmn2:outgoing>b069f309-13fe-4477-979b-69ffe2a99fa3</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="8666bf48-f4df-497b-b53f-ed86bb7ed88a" signalRef="SignalCheckClientHistory"/>
+      <bpmn2:signalEventDefinition id="654dab4a-0f7f-44c5-91f0-22702f5695cd" signalRef="SignalCalculateInsuranceSum"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="b069f309-13fe-4477-979b-69ffe2a99fa3" name="from-SignalCheckClientHistory-AND-SignalCalculateInsuranceSum-to-AssessClaim" sourceRef="257d9809-c7f0-4899-a54a-a70b1ae9e60e" targetRef="sid-6322A484-D0CD-4D6E-9BC3-E8FF2E4E6729"/>
+    <bpmn2:sequenceFlow id="15d18eba-6715-4ba3-8b25-47dee596f9f9" name="from-AssessClaim-to-EndEvent" sourceRef="sid-6322A484-D0CD-4D6E-9BC3-E8FF2E4E6729" targetRef="EndEvent-2a3bba42-232c-4022-8214-b8dd833b058e"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalAssessClaim" name="SignalAssessClaim"/>
+  <bpmn2:process id="dbcaad7e-c573-4350-aa76-643ac6bfbd49" name="Process-SchedulePayment">
+    <bpmn2:task id="sid-99EF8D52-AA57-4A16-808A-E4C482D93CF5" name="SchedulePayment">
+      <bpmn2:incoming>d243075a-fd45-42be-bac7-394268b8f50f</bpmn2:incoming>
+      <bpmn2:outgoing>3a3ba9c0-e224-428e-90b2-15bc4bcd1665</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-3ebe0787-0e4c-4b1d-87fd-d6f0c8c54515" name="EndEvent">
+      <bpmn2:incoming>3a3ba9c0-e224-428e-90b2-15bc4bcd1665</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="285bd3a4-2083-4a97-9e23-bad965bbbfd9" signalRef="SignalSchedulePayment"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="e1078c01-2c78-4df9-80ff-66c1249227f3" name="SignalAssessClaim">
+      <bpmn2:outgoing>d243075a-fd45-42be-bac7-394268b8f50f</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="9a3983cb-262d-47eb-acf9-fd9f982b121f" signalRef="SignalAssessClaim"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="d243075a-fd45-42be-bac7-394268b8f50f" name="from-SignalAssessClaim-to-SchedulePayment" sourceRef="e1078c01-2c78-4df9-80ff-66c1249227f3" targetRef="sid-99EF8D52-AA57-4A16-808A-E4C482D93CF5">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tExpression" id="611f199d-9e59-438c-bba7-80e8756f3675"><bpmn2:documentation id="eec17a9f-954b-4d60-a1dd-6636b61f94ca">0--60</bpmn2:documentation></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="3a3ba9c0-e224-428e-90b2-15bc4bcd1665" name="from-SchedulePayment-to-EndEvent" sourceRef="sid-99EF8D52-AA57-4A16-808A-E4C482D93CF5" targetRef="EndEvent-3ebe0787-0e4c-4b1d-87fd-d6f0c8c54515"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalSchedulePayment" name="SignalSchedulePayment"/>
+  <bpmn2:process id="7902ae98-ec68-44b0-a11b-29ec8baf2bea" name="Process-InformClient">
+    <bpmn2:task id="sid-11B5B1EA-B3F4-49BE-9DF8-B2434942C413" name="InformClient">
+      <bpmn2:incoming>267eb7ee-3c0a-4989-9046-e3f3ab10c97d</bpmn2:incoming>
+      <bpmn2:outgoing>3d832950-edd4-457d-8707-94d89ccdd515</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-a5028c4f-7959-416b-91dc-a549b49d5895" name="EndEvent">
+      <bpmn2:incoming>3d832950-edd4-457d-8707-94d89ccdd515</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="7c65433d-5867-4d9d-ba24-f6e86f49b8ea" signalRef="SignalInformClient"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="b319cd9a-eb47-4b04-831b-2d2b7995e315" name="SignalAssessClaim">
+      <bpmn2:outgoing>267eb7ee-3c0a-4989-9046-e3f3ab10c97d</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="a8cc5760-1728-4c81-bd4d-746f016653ca" signalRef="SignalAssessClaim"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="267eb7ee-3c0a-4989-9046-e3f3ab10c97d" name="from-SignalAssessClaim-to-InformClient" sourceRef="b319cd9a-eb47-4b04-831b-2d2b7995e315" targetRef="sid-11B5B1EA-B3F4-49BE-9DF8-B2434942C413">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tExpression" id="1660186c-cc73-41ab-b216-87d7358b510c"><bpmn2:documentation id="65868c7d-ef95-4c67-8708-cf8c2693bc73">61--100</bpmn2:documentation></bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="3d832950-edd4-457d-8707-94d89ccdd515" name="from-InformClient-to-EndEvent" sourceRef="sid-11B5B1EA-B3F4-49BE-9DF8-B2434942C413" targetRef="EndEvent-a5028c4f-7959-416b-91dc-a549b49d5895"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalInformClient" name="SignalInformClient"/>
+  <bpmn2:process id="3e04de40-9977-49ac-a19e-ebca9bf0126e" name="Process-END">
+    <bpmn2:task id="sid-46750D7E-E8B7-41C5-8888-E31CBF7314E4" name="END">
+      <bpmn2:incoming>5a4cfc01-b17d-4712-8c32-61c4c8c1ca5c</bpmn2:incoming>
+      <bpmn2:incoming>ec7281e5-4cc1-474d-95d3-8408957beffc</bpmn2:incoming>
+      <bpmn2:outgoing>17ed67cd-89c4-46f1-a9a0-8c98c30f3451</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:endEvent id="EndEvent-ae5f8052-e511-4332-8b0c-9d6dddb339fe" name="EndEvent">
+      <bpmn2:incoming>17ed67cd-89c4-46f1-a9a0-8c98c30f3451</bpmn2:incoming>
+      <bpmn2:signalEventDefinition id="05935490-5b49-40c0-8489-a927addacfe7" signalRef="SignalEND"/>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="3c0e91a4-1a4b-45fb-abdd-97e88425d74b" name="SignalSchedulePayment">
+      <bpmn2:outgoing>5a4cfc01-b17d-4712-8c32-61c4c8c1ca5c</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="c4d4d668-ed82-44b8-a891-af95d3483504" signalRef="SignalSchedulePayment"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="5a4cfc01-b17d-4712-8c32-61c4c8c1ca5c" name="from-SignalSchedulePayment-to-END" sourceRef="3c0e91a4-1a4b-45fb-abdd-97e88425d74b" targetRef="sid-46750D7E-E8B7-41C5-8888-E31CBF7314E4"/>
+    <bpmn2:startEvent id="2aa434f8-999b-4ac4-8698-b20721bfc57e" name="SignalInformClient">
+      <bpmn2:outgoing>ec7281e5-4cc1-474d-95d3-8408957beffc</bpmn2:outgoing>
+      <bpmn2:signalEventDefinition id="d42393e7-f1b9-4862-aeef-3e3276266a9c" signalRef="SignalInformClient"/>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="ec7281e5-4cc1-474d-95d3-8408957beffc" name="from-SignalInformClient-to-END" sourceRef="2aa434f8-999b-4ac4-8698-b20721bfc57e" targetRef="sid-46750D7E-E8B7-41C5-8888-E31CBF7314E4"/>
+    <bpmn2:sequenceFlow id="17ed67cd-89c4-46f1-a9a0-8c98c30f3451" name="from-END-to-EndEvent" sourceRef="sid-46750D7E-E8B7-41C5-8888-E31CBF7314E4" targetRef="EndEvent-ae5f8052-e511-4332-8b0c-9d6dddb339fe"/>
+  </bpmn2:process>
+  <bpmn2:signal id="SignalEND" name="SignalEND"/>
+</bpmn2:definitions>
