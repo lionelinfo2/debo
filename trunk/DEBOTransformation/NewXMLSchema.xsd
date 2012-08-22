@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/NewXMLSchema"
+	xmlns:tns="http://www.example.org/NewXMLSchema" elementFormDefault="qualified">
+
+	<element name="extensionElements">
+		<complexType>
+			<sequence>
+				<choice minOccurs="0">
+	      			<element ref="basicEventRule"/>
+	      			<element ref="extendedEventRule"/>
+	    		</choice>
+	    		<element ref="startSignal"/>
+	    		<element ref="endSignal"/>
+	    		<element ref="cancellation"/>		
+			</sequence>
+		</complexType>
+	</element>
+	
+    <element name="basicEventRule">
+	    <complexType>
+	      <sequence>
+	        <element maxOccurs="unbounded" ref="conjunction"/>
+	      </sequence>
+	    </complexType>
+  	</element>
+  	
+  	<element name="extendedEventRule" type="string"/>
+  		  
+  	<element name="conjunction">
+	  	<complexType>
+	  		<sequence>
+	  			<element maxOccurs="unbounded" ref="event"/>
+	  			<element maxOccurs="unbounded" ref="condition"/>
+	  		</sequence>
+	  	</complexType>
+  	</element>
+  	
+  	<element name="cancellation">
+	  	<complexType>
+		  	<sequence>
+		  		<element maxOccurs="unbounded" ref="event"/>
+		  	</sequence>
+	  	</complexType>
+  	</element>
+  	
+  	<element name="event" type="id-String"/>  	
+  	<element name="endSignal" type="id-String"/>
+  	<element name="startSignal" type="id-String"/>
+  	<element name="condition" type="id-String"/>
+  	  	
+  	<complexType name="id-String">
+  	<simpleContent>
+   		<extension base="string">
+    		<attribute name="id" type="int"/>
+   		</extension>
+  	</simpleContent>
+ 	</complexType>
+</schema>

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>JTechLabs - JDirectoryChooser User's Guide</title>
+</head>
+<body style="padding: 10px 14px; background: #FFFFFF; color: #515A5F; font-size: 12px; font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;">
+    <h2 style="font-weight: bold; font-size:14px; color: #2E60AA;">How to Use JDirectoryChooser component</h2>
+    <p>JDirectoryChooser provides a GUI for navigating the file system, and then either choosing an existing directory from a tree or managing file system directories' tree structure by creating new directories, renaming, copying, moving or deleting existing directories.</p>
+    <p>To display a directory chooser, you can either add an instance of JDirectoryChooser to a container, or use the JDirectoryChooser API to show a modal dialog that contains a directory chooser.</p>
+    <p>A JDirectoryChooser object only presents the GUI for choosing and managing directories. Your program is responsible for doing something with the chosen directory, such as using it as default location for output or doing something with the content of the chosen directory... etc.</p>
+    <p>The typical usage of the directory chooser dialog is shown below:</p>
+<pre style="background: #FFFFFF;font-family:monospaced;color: #000000;">
+
+<font color="#808080">/**
+* Event handler.
+*
+* @param e     the action event.
+*/</font>
+<font color="#000080"><b>public void</b></font> actionPerformed(ActionEvent e) {
+    File dir = JDirectoryChooser.showDialog(<i>aParent</i>));
+    <font color="#000080"><b>if</b></font> (dir != <font color="#000080"><b>null</b></font>) {
+        <font color="#808080">// Real application would handle user's selection here. </font>
+        System.<font color="#000080"><b><i>out</i></b></font>.println(<font color="#008000"><b>"You selected: "</b></font> + dir.getName());
+    } <font color="#000080"><b>else</b></font> {
+        System.<font color="#000080"><b><i>out</i></b></font>.println(<font color="#008000"><b>"Operation canceled by user"</b></font>);
+    }
+}
+
+</pre>
+</body>
+</html>

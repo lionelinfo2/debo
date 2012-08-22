@@ -1,0 +1,5 @@
+Signavio files:
+	Delete xsi:schemalocation
+	Delete DI information
+	Delete ExtensionElements -> SignavioMetadata
+	

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions id="definitions" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.omg.org/bpmn20" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://bpmndi.org">
+   <process id="sid-aaa59dd3-dda4-4a86-a81c-46684020e419" isExecutable="false">
+      <startEvent id="sid-F1540A31-361E-43C3-8161-E545B99713F5" name="">
+        <outgoing>sid-D2A5C558-3CDC-452C-906A-15BCE20E3101</outgoing>
+      </startEvent>
+      <parallelGateway gatewayDirection="Diverging" id="sid-AB230375-4517-45D3-A822-913B41EE1527" name="">
+         <incoming>sid-D2A5C558-3CDC-452C-906A-15BCE20E3101</incoming>
+         <outgoing>sid-39FA2E36-74DF-4866-AB75-75247B6AF13D</outgoing>
+         <outgoing>sid-1FA9359D-8315-4B59-A9A7-D858A0828D2C</outgoing>
+         <outgoing>sid-8D61EFC3-F1CD-45DB-80DC-57797FBE9B58</outgoing>
+      </parallelGateway>
+      <task completionQuantity="1" id="sid-4EB43D41-A1BA-4C6B-AF64-5F951D977A34" isForCompensation="false" name="A" startQuantity="1">
+         <incoming>sid-39FA2E36-74DF-4866-AB75-75247B6AF13D</incoming>
+         <outgoing>sid-90BB4B7A-FF7F-4F5E-86BB-7DC07602EBEA</outgoing>
+      </task>
+      <exclusiveGateway gatewayDirection="Converging" id="sid-767D6559-ADB9-4A9C-B2BE-7327921F5F79" name="">
+         <incoming>sid-90BB4B7A-FF7F-4F5E-86BB-7DC07602EBEA</incoming>
+         <incoming>sid-4D3D9B07-58E7-4E1D-8C45-90446087262C</incoming>
+         <outgoing>sid-C188F4A7-1797-4D3F-894A-BEBB4ADF6CB4</outgoing>
+      </exclusiveGateway>
+      <task completionQuantity="1" id="sid-7F0448E8-CA8E-4338-97CE-BF39222790C2" isForCompensation="false" name="C" startQuantity="1">
+         <incoming>sid-8D61EFC3-F1CD-45DB-80DC-57797FBE9B58</incoming>
+         <outgoing>sid-4D3D9B07-58E7-4E1D-8C45-90446087262C</outgoing>
+      </task>
+      <parallelGateway gatewayDirection="Converging" id="sid-89C79F29-FB35-4E5D-905C-FED181A804EE" name="">
+         <incoming>sid-DA6BB8C1-A477-46A3-A7E5-67D887B40802</incoming>
+         <incoming>sid-C188F4A7-1797-4D3F-894A-BEBB4ADF6CB4</incoming>
+         <outgoing>sid-2B800B92-22EF-4E71-A322-A190D07917C4</outgoing>
+      </parallelGateway>
+      <task completionQuantity="1" id="sid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD2" isForCompensation="false" name="B" startQuantity="1">
+         <incoming>sid-1FA9359D-8315-4B59-A9A7-D858A0828D2C</incoming>
+         <outgoing>sid-DA6BB8C1-A477-46A3-A7E5-67D887B40802</outgoing>
+      </task>
+      <task completionQuantity="1" id="sid-6743DE1F-37BF-4E86-B078-5B84EACDB015" isForCompensation="false" name="D" startQuantity="1">
+         <incoming>sid-2B800B92-22EF-4E71-A322-A190D07917C4</incoming>
+         <outgoing>sid-CF4841A3-876E-4E9E-8536-0691EE045638</outgoing>
+      </task>
+      <endEvent id="sid-99265A43-7EB2-4BD7-8EC8-7870CF650779" name="">
+         <incoming>sid-CF4841A3-876E-4E9E-8536-0691EE045638</incoming>
+      </endEvent>
+      <sequenceFlow id="sid-D2A5C558-3CDC-452C-906A-15BCE20E3101" name="" sourceRef="sid-F1540A31-361E-43C3-8161-E545B99713F5" targetRef="sid-AB230375-4517-45D3-A822-913B41EE1527"/>
+      <sequenceFlow id="sid-39FA2E36-74DF-4866-AB75-75247B6AF13D" name="" sourceRef="sid-AB230375-4517-45D3-A822-913B41EE1527" targetRef="sid-4EB43D41-A1BA-4C6B-AF64-5F951D977A34"/>
+      <sequenceFlow id="sid-1FA9359D-8315-4B59-A9A7-D858A0828D2C" name="" sourceRef="sid-AB230375-4517-45D3-A822-913B41EE1527" targetRef="sid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD2"/>
+      <sequenceFlow id="sid-8D61EFC3-F1CD-45DB-80DC-57797FBE9B58" name="" sourceRef="sid-AB230375-4517-45D3-A822-913B41EE1527" targetRef="sid-7F0448E8-CA8E-4338-97CE-BF39222790C2"/>
+      <sequenceFlow id="sid-2B800B92-22EF-4E71-A322-A190D07917C4" name="" sourceRef="sid-89C79F29-FB35-4E5D-905C-FED181A804EE" targetRef="sid-6743DE1F-37BF-4E86-B078-5B84EACDB015"/>
+      <sequenceFlow id="sid-CF4841A3-876E-4E9E-8536-0691EE045638" name="" sourceRef="sid-6743DE1F-37BF-4E86-B078-5B84EACDB015" targetRef="sid-99265A43-7EB2-4BD7-8EC8-7870CF650779"/>
+      <sequenceFlow id="sid-DA6BB8C1-A477-46A3-A7E5-67D887B40802" name="" sourceRef="sid-5244FEDE-BFF7-4686-A6FF-3A95A4C48BD2" targetRef="sid-89C79F29-FB35-4E5D-905C-FED181A804EE"/>
+      <sequenceFlow id="sid-C188F4A7-1797-4D3F-894A-BEBB4ADF6CB4" name="" sourceRef="sid-767D6559-ADB9-4A9C-B2BE-7327921F5F79" targetRef="sid-89C79F29-FB35-4E5D-905C-FED181A804EE"/>
+      <sequenceFlow id="sid-4D3D9B07-58E7-4E1D-8C45-90446087262C" name="" sourceRef="sid-7F0448E8-CA8E-4338-97CE-BF39222790C2" targetRef="sid-767D6559-ADB9-4A9C-B2BE-7327921F5F79"/>
+      <sequenceFlow id="sid-90BB4B7A-FF7F-4F5E-86BB-7DC07602EBEA" name="" sourceRef="sid-4EB43D41-A1BA-4C6B-AF64-5F951D977A34" targetRef="sid-767D6559-ADB9-4A9C-B2BE-7327921F5F79"/>
+   </process>
+</definitions>
