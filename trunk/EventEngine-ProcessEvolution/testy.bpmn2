@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<bpmn:definitions id="sid-Definitions" exporter="test"
+	exporterVersion="1" xmlns:xmi="http://schema.omg.org/spec/XMI"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+	xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmnxmi="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"
+	xmlns:bpmndixmi="http://www.omg.org/spec/BPMN/20100524/DI-XMI"
+	xmlns:dixmi="http://www.omg.org/spec/DD/20100524/DI-XMI" xmlns:dcxmi="http://www.omg.org/spec/DD/20100524/DC-XMI">
+	<bpmn:process id="newProcessId">
+		<bpmn:startEvent id="newStartEventId1">
+			<bpmn:eventDefinitionRef xsi:type="bpmn:tSignalEventDefinition">SignalDefinitionId
+			</bpmn:eventDefinitionRef>
+		</bpmn:startEvent>
+		<bpmn:startEvent id="newStartEventId2">
+			<bpmn:eventDefinitionRef xsi:type="bpmn:tSignalEventDefinition">SignalDefinitionId
+			</bpmn:eventDefinitionRef>
+		</bpmn:startEvent>
+	</bpmn:process>
+	<bpmn:signal id="signal" />
+	<bpmn:signalEventDefinition id="SignalDefinitionId"
+		signalRef="signal " />
+</bpmn:definitions>

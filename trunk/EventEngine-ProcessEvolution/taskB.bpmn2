@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	xmlns:bpmnxmi="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"
+	xmlns:dcxmi="http://www.omg.org/spec/DD/20100524/DC-XMI" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dixmi="http://www.omg.org/spec/DD/20100524/DI-XMI"
+	xmlns:bpmndixmi="http://www.omg.org/spec/BPMN/20100524/DI-XMI"
+	xmlns:xmi="http://schema.omg.org/spec/XMI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+	xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="sid-5f544826-9d2e-41cc-99d6-e7765f82b6b0">
+	
+	<bpmn:process id="sid-Processsid-B9C6E520-9DE9-4E92-907B-8AA1460F8E02">
+		<bpmn:endEvent id="EndEventsid-B9C6E520-9DE9-4E92-907B-8AA1460F8E02">
+			<bpmn:incoming>SFoutputsid-B9C6E520-9DE9-4E92-907B-8AA1460F8E02
+			</bpmn:incoming>
+			<bpmn:signalEventDefinition
+				id="outputDefsid-B9C6E520-9DE9-4E92-907B-8AA1460F8E02" signalRef="SignalB" />
+		</bpmn:endEvent>
+		<bpmn:sequenceFlow id="SFoutputsid-B9C6E520-9DE9-4E92-907B-8AA1460F8E02"
+			targetRef="EndEventsid-B9C6E520-9DE9-4E92-907B-8AA1460F8E02"
+			sourceRef="sid-B9C6E520-9DE9-4E92-907B-8AA1460F8E02" />
+		<bpmn:sequenceFlow id="SFinputsid-B9C6E520-9DE9-4E92-907B-8AA1460F8E027"
+			targetRef="sid-B9C6E520-9DE9-4E92-907B-8AA1460F8E02" sourceRef="StartEventsid-B9C6E520-9DE9-4E92-907B-8AA1460F8E026" />
+		<bpmn:startEvent id="StartEventsid-B9C6E520-9DE9-4E92-907B-8AA1460F8E026">
+			<bpmn:outgoing>SFinputsid-B9C6E520-9DE9-4E92-907B-8AA1460F8E027
+			</bpmn:outgoing>
+			<bpmn:signalEventDefinition
+				id="inputDefsid-308D6797-BBB4-497D-BE66-EEC3A2AF80B56" signalRef="SignalStartTask" />
+		</bpmn:startEvent>
+		<bpmn:task id="sid-B9C6E520-9DE9-4E92-907B-8AA1460F8E02"
+			name="B">
+			<bpmn:incoming>SFinputsid-B9C6E520-9DE9-4E92-907B-8AA1460F8E027
+			</bpmn:incoming>
+			<bpmn:outgoing>SFoutputsid-B9C6E520-9DE9-4E92-907B-8AA1460F8E02
+			</bpmn:outgoing>
+		</bpmn:task>
+	</bpmn:process>
+	
+	<bpmn:signal id="SignalStartTask" />
+
+	<bpmn:signal id="SignalB" />
+
+</bpmn:definitions>
